@@ -1,0 +1,238 @@
+:root {
+    --accent-bg-color-green-light: #28B463;
+    --accent-bg-color-green-dark: #0A9645;
+    --accent-bg-color-red-dark: #800000;
+    --accent-bg-color-red-light: #9E1E1E;
+    --accent-bg-color-yellow-dark: #DAA520;
+    --accent-bg-color-yellow-darker: #BC8702;
+    --accent-bg-color-yellow-light: #FFDF00;
+    --header-bg-color: white;
+    --primary-bg-color: #F7F9F9;
+    --header-min-height: 3.5em;
+}
+
+/* html elements */
+html {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    background: var(--accent-bg-color-red-dark);
+    border: none;
+    color: white;
+    font-family: inherit;
+    padding: 1em 1.5em;
+    font-size: 1rem;
+}
+
+body {
+    height: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* classes */
+
+/* window container */
+.window-container {
+    background-color: var(--primary-bg-color);
+    height: inherit;
+}
+
+.pup-logo {
+    opacity: 0.1;
+    position: fixed;
+    bottom: -50%;
+    left: 70%;
+    width: 60%;
+}
+
+
+/* navigation and main container */
+.nav-main-container {
+    display: grid;
+    height: inherit;
+    grid-template-columns: minmax(8em, 14em) auto;
+}
+
+/* navigation */
+.nav {
+    background: var(--accent-bg-color-red-dark);
+    display: grid;
+    grid-template-rows: min-content min-content auto;
+}
+
+.nav .design {
+    background: var(--accent-bg-color-yellow-dark);
+    height: var(--header-min-height);
+}
+
+.nav .portal {
+    margin-top: 3em;
+}
+
+.nav button {
+    text-align: left;
+}
+
+.nav button:hover {
+    background: var(--accent-bg-color-red-light);
+    border-left: 0.25em solid var(--accent-bg-color-yellow-light);
+}
+
+.nav button i { /* navigation icon */
+    padding-right: 0.5em;
+}
+
+.nav .portal {
+    display: grid;
+}
+
+/* header and main container */ 
+.header-main-container {
+    display: grid;
+    grid-template-rows: min-content auto;
+    max-height: 100%;
+}
+
+/* header */
+.header {
+    background: var(--header-bg-color);
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    display: grid;
+    font-size: 1rem;
+    justify-items: end;
+    min-height: var(--header-min-height);
+    padding-right: 1.5em;
+}
+
+.header .admin-name {
+    margin-right: 0.6em;
+}
+
+.header .logout {
+    background: var(--accent-bg-color-yellow-dark);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    letter-spacing: 0.6px;
+    padding: 0.6em 1em;
+}
+
+.header .logout:hover {
+    background: var(--accent-bg-color-yellow-darker);
+}
+
+.header div {  /* division under header */
+    letter-spacing: 0.25px;
+    margin: auto 0;
+}
+
+/* sign-out icon */
+.fa-sign-out-alt {
+    transform: scale(-1, 1);  /* flip sign-out icon horizontally */
+}
+
+/* main */ 
+.main {
+    display: grid;
+    grid-template-rows: min-content minmax(auto, 28em);
+    padding: 3em 1.5em;
+}
+
+/* search, filter, and borrow container */
+.search-filter-borrow-container {
+    display: grid;
+    grid-template-columns: 18em min-content 10em auto max-content;
+}
+
+
+/* select input and search button */
+.search-input {
+    font-family: inherit;
+    font-size: 1rem;
+    border-radius: 6px 0px 0px 6px;
+    padding: 0.5em 1em;
+}
+
+.search-btn {
+    background: var(--accent-bg-color-yellow-dark);
+    border-radius: 0px 6px 6px 0px;
+    padding: 0.5em 1em;
+}
+
+.search-btn:hover {
+    background: var(--accent-bg-color-yellow-darker);
+}
+
+/* filter */
+.filter-select {
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-left: 1.2em;
+    padding: 0.5em 0.5em;
+}
+
+/* borrow button */
+.borrow-btn {
+    background: var(--accent-bg-color-green-light);
+    border-radius: 6px;
+    padding: 0.5em 1.5em;
+}
+
+.borrow-btn:hover {
+    background: var(--accent-bg-color-green-dark)
+}
+
+.borrow-btn i {
+    padding-right: 0.4em;
+}
+
+/* table */ 
+.table-container { 
+    display: inline-block;
+    overflow: auto;
+    margin: 1em 0em;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+th {
+    background: white;
+    font-weight: 900;
+    padding: 1em;
+    text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+    background: rgba(218, 165, 32, 0.25);
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+tbody tr:hover {
+    background: var(--accent-bg-color-yellow-dark);
+    color: white;
+}
+
+
+td {
+    padding: 1em;
+    text-align: left;
+}
+
+
